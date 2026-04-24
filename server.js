@@ -34,7 +34,7 @@ const app = express();
 
 const ALLOWED_ORIGINS = [
   'http://localhost:4200',
-  'https://your-app-name.netlify.app', // ← replace with your real Netlify URL
+  'https://jobsourcing-interview.netlify.app', // ← replace with your real Netlify URL
   ...CORS_ORIGIN.split(',').map(s => s.trim()).filter(Boolean),
 ];
 
