@@ -19,7 +19,7 @@ const SMTP_USER       = process.env.SMTP_USER;
 // — the actual credential has no whitespace. Strip defensively so either form works.
 const SMTP_PASS       = (process.env.SMTP_PASS || '').replace(/\s+/g, '');
 const UPLOAD_DIR      = path.join(__dirname, 'uploads');
-const MAX_UPLOAD      = 100 * 1024 * 1024; // 100 MB
+const MAX_UPLOAD      = 500 * 1024 * 1024; // 100 MB
 
 if (!SMTP_USER || !SMTP_PASS) {
   console.warn('[warn] SMTP_USER / SMTP_PASS not set — email send will fail.');
