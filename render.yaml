@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: interview-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: 587
+      - key: SMTP_USER
+        fromGroup: email-config
+      - key: SMTP_PASS
+        fromGroup: email-config
+      - key: RECIPIENT_EMAIL
+        fromGroup: email-config
